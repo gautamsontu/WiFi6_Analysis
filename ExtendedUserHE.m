@@ -1,3 +1,4 @@
+% Defining a wlanHESUConfig object for a extended single-user transmission
 ExtSU = wlanHESUConfig;
 ExtSU.ChannelBandwidth = 'CBW20'; % Channel bandwidth
 ExtSU.APEPLength = 1000;          % Payload length in bytes
