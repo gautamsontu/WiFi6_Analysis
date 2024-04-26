@@ -32,24 +32,3 @@ spectrumScope = spectrumAnalyzer('SampleRate', fs, ...
 
 % Visualizing the spectrum of the transmission
 spectrumScope(txSUWaveform);
-
-%{
-OUTPUT:
-Top Panel (Spectrum View): This shows the power of the signal across different frequencies. 
-The x-axis is frequency, and the y-axis is power in dBm. The sharp drop-offs on the sides are 
-due to the filtering of the signal, which limits the bandwidth to the configured CBW20 
-(20 MHz channel bandwidth). The relatively flat line across the channel indicates 
-that the transmission power is spread evenly across the utilized frequency spectrum.
-
-Bottom Panel (Spectrogram View): This view shows how the signal's frequency content evolves over time. 
-The x-axis is frequency, the y-axis is time, and the colors represent signal power at 
-different frequencies over time. Here, the consistent coloration across time indicates a steady, 
-continuous transmission without frequency hopping or variation in signal power. 
-The bright vertical lines at the edges represent the transition periods where 
-the signal starts or ends, with higher power due to transient effects.
-
-The output confirms that a standard Wi-Fi signal was generated according to the IEEE 802.11ax 
-specifications and visualized over the course of the transmission. The signal maintains its 
-characteristics over the duration of the transmission, as expected for a typical Wi-Fi signal 
-without any external interference or channel effects.
-%}
