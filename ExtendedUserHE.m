@@ -6,17 +6,17 @@ ExtSU.ChannelCoding = 'LDPC';     % Channel coding
 ExtSU.NumSpaceTimeStreams = 2;    % Number of space-time streams
 ExtSU.NumTransmitAntennas = 2;    % Number of transmit antennas
 
-ExtSU.ExtendedRange = true;  % Enable extended-range format
-ExtSU.Upper106ToneRU = true; % Use only upper 106-tone RU
+ExtSU.ExtendedRange = true;  % Enabled extended-range format
+ExtSU.Upper106ToneRU = true; % Using only upper 106-tone RU
 
-% Generate a packet
+% Generating a packet
 psdu = randi([0 1],getPSDULength(ExtSU)*8,1,'int8'); % Random PSDU
-txExtSUWaveform = wlanWaveformGenerator(psdu,ExtSU);   % Create packet
+txExtSUWaveform = wlanWaveformGenerator(psdu,ExtSU);   % Creating packet
 
-fs = wlanSampleRate(ExtSU); % Get baseband sample rate
+fs = wlanSampleRate(ExtSU); % Getting baseband sample rate
 fprintf('%i\n', fs)
 ofdmInfo = wlanHEOFDMInfo('HE-Data',ExtSU);
-fftsize = ofdmInfo.FFTLength; % Use the data field fft size
+fftsize = ofdmInfo.FFTLength; % Using the data field fft size
 rbw = fs/fftsize; % Resoluton bandwidth
 fprintf('%i\n', rbw)
 spectrumScope = spectrumAnalyzer(SampleRate=fs,...
