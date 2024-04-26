@@ -1,4 +1,4 @@
-%MU-MIMO config: 4 users using one 242-tone RU
+%MU-MIMO configuring : 4 users using one 242-tone RU
 cfgMUMIMO = wlanHEMUConfig(195);
 
 showAllocation(cfgMUMIMO);
